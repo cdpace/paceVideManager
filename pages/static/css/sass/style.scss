@@ -1,0 +1,189 @@
+$primaryColor: #7C786A;
+$secondaryColor: #8DCDC1;
+$secondaryColorLight: #ABCCC5;
+$thirdColor: #D3E397;
+$fourthColor:#FFF5C3;
+$fifthColor:#EB6E44;
+
+
+$mainFont : Montserrat,calibri;
+$controlBoxItemsSize: 10px;
+
+//Only for testing purposes
+#swc{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    background: yellow;
+    padding: 0px;
+    z-index: 3000;
+    font-size: small;
+    display: none;
+}
+
+//-------
+
+body{
+    background-color: $thirdColor;
+    margin:0px;
+    font-family: $mainFont;
+}
+
+#header{
+    position: relative;
+    width: 99.9%;
+    height: 300px;
+}
+
+#header .controlBox{
+    position: relative;
+    left: 70%;
+    width: 30%;
+    height: 40px;    
+}
+
+#header .controlBox .controlboxItem{
+    display: inline-block;
+    font-size: $controlBoxItemsSize;
+    color: $primaryColor;
+    font-weight: bold;
+    cursor: pointer;
+    float:right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#header .logo{
+    position: relative;
+    top:10%;
+    left:3%;
+    width:400px;
+    height: 200px;
+}
+
+#header .logo img{
+    width:83%;
+}
+
+#header .menu{
+    position: relative;
+    left:32%;
+    top:-42%;
+    width: 66%;
+    height: 100px;
+    background: $secondaryColor;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 10px 11px 5px -7px rgba(0,0,0,0.54);
+    -moz-box-shadow: 10px 11px 5px -7px rgba(0,0,0,0.54);
+    box-shadow: 10px 11px 5px -7px rgba(0,0,0,0.54);
+}
+
+#header .menu .menuItem{
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    cursor: pointer;
+    color: $fifthColor;
+    font-size: 18px;
+   border-right: inset 2px $primaryColor;
+}
+
+#header .menu .menuItem:last-child{
+    border-right: none;
+}
+
+#header .searchBar{
+    position: relative;
+    top: -293px;
+    left: 68%;
+    width: 32%;
+}
+
+#header .searchBar img{
+    width: 19px;
+    padding-top: 1px;
+    position: relative;
+    left:6%;
+    opacity: 0.5;
+}
+
+#header .searchBar input{
+    width:80%;
+    border-radius: 5px;
+    padding-left:33px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    color: $secondaryColor;
+    font-weight: bold;
+    -webkit-box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.54);
+    -moz-box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.54);
+    box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.54);
+    border: solid 2px $secondaryColor;
+}
+
+#body{
+    padding-left: 10px;
+    height: 100%;
+}
+
+#footer{
+    background-color: $primaryColor;
+    height: 400px;
+}
+
+@media screen and (max-width: 1377px) {
+   #header .menu{
+       left:40%;
+       width: 50%;
+    }    
+}
+
+@media screen and (max-width: 1096px) {
+   #header .menu{
+       left:45%;
+       width: 50%;
+    }    
+}
+
+//@media screen and (max-width: 963px) {
+  //    #header .menu{
+    //      top:-57%;
+      //    left:60%;
+        //  width: 30%;
+          //height: 200px;
+    //}    
+//}
+
+@media screen and (max-width: 715px){
+    #header {
+        height: 98px;
+    }
+    
+    #header .logo{
+        top: 0%;
+        left: 0%;
+        width: 47%;
+        height: 98px;
+    }
+    
+    #header .menu{
+        top: 12%;
+        left:0%;
+        width:100%;
+        height: 20px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    
+    #header .menu:hover{
+        background: $secondaryColor;
+        height: 200px;
+    }
+    
+    #body{
+        padding-top: 50px;
+    }
+}
