@@ -1,6 +1,6 @@
 {
-  "name": "gamepot",
-  "description": "online game shop",
+  "name": "paceVideoManager",
+  "description": "online video manager",
   "version": "0.0.2",
   "dependencies": {
     "body-parser": "^1.15.0",
