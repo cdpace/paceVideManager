@@ -7,6 +7,8 @@ var http = require("http").Server(app);
 var fs = require("fs");
 var sass = require("node-sass");
 
+var info = require("./modules/services/InfoGrabber")(http);
+
 //Custom Modules
 var controllers = require("./modules/controllers");
 var ntepace = require("ntepace")(fs, app, {
@@ -36,7 +38,7 @@ app.use(ntepace.routeHandler);
 
 //set configurations
 var connectionConfig = {
-    port: 8088
+    port: process.env.PORT
 };
 
 //Start server
